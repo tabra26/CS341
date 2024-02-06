@@ -1,0 +1,110 @@
+<!--Author: Nicholas Tabra   Date: 1/24/2024-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cheesecake Order Form</title>
+
+    <!-- references css file so it can be used-->
+    <link rel="stylesheet" type="text/css" href="stylesheets\tabra26.css">
+
+    <!-- references google fonts to be used-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+    </script>
+
+</head>
+
+<body>
+    <h1>Cheesecake Order Form</h1>
+
+    <!-- imports image from a link instead of internally, and styles it to not be too big
+before using the css file. This is because the image is supposed to be smaller without the css file-->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/1200px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg"
+        alt="yumyumcheesecake" id="cheesecake1" style="width:500px; height:300px">
+
+
+
+    <p id="quantityTopping"> Quantity Topping</p>
+
+    <!-- dropdown and radio buttons were put onto a table for better readability-->
+    <table>
+        <tr>
+            <td>
+
+                <!-- dropdown name and items specified here-->
+                <select name="dropdown" id="dropdownId">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+
+                </select>
+            </td>
+
+            <td>
+                <!--radio buttons created here with respective labels-->
+                <input type="radio" id="first" name="group" value="Plain">
+                <label for="first">Plain</label><br>
+
+                <input type="radio" id="second" name="group" value="Cherry">
+                <label for="second">Cherry</label><br>
+
+                <input type="radio" id="third" name="group" value="Chocolate">
+                <label for="third">Chocolate</label><br>
+
+            </td>
+        </tr>
+    </table>
+    <p id="notes">Notes:</p>
+
+
+
+    <!-- text box created just like the one in the HW pdf-->
+    <textarea id="specs" name="specs" rows="4" cols="50"
+        placeholder="Enter any special instructions here."></textarea><br>
+
+    <!--order button also created under notes-->
+    <button type="button" id="orderButton">Order</button> <br>
+
+    <div class="dropdownContainer">
+        <h3>Orders for <span id="monthDropdown" class="dropdownClass">Jan</span></h3>
+        <div id="dropdownStuff" class="dropdownStuffClass">
+            <!-- div structure and ul/li use for each month suggested by ChatGPT-->
+            <ul>
+                <!--all dropdown potential selections below -->
+                <li>Jan</li>
+                <li>Feb</li>
+                <li>Mar</li>
+                <li>Apr</li>
+                <li>May</li>
+                <li>Jun</li>
+                <li>Jul</li>
+                <li>Aug</li>
+                <li>Sep</li>
+                <li>Oct</li>
+                <li>Nov</li>
+                <li>Dec</li>
+            </ul>
+        </div>
+    </div>
+    <ul>
+        <!--finally, the orders are listed on a bullet point list below!-->
+        <li>11 cherry</li>
+        <li>17 chocolate</li>
+        <li>31 plain</li>
+    </ul>
+
+
+
+    <!-- --------------------------- HW2 Script Code -------------------------------------->
+<script src="javascript/handleDropdown.js"></script>
+
+<script src="javascript/handleOrder.js"></script>
+
+
+
+</body>
+
+</html>
